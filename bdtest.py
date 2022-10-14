@@ -78,7 +78,7 @@ def sql(sq):
 
 conn = sqlite3.connect('orders.db')
 cur = conn.cursor()
-create()
+
 a=int(input("Menu 1) Создать 2) SQL-заппрос"))
 if a==1:
    create()
