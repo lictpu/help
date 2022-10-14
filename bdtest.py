@@ -72,10 +72,17 @@ def create():
    conn.commit()
 
    
-def sql():
-   cur.execute("SELECT * FROM users WHERE lname='Parker'")
+def sql(sq):
+   cur.execute(sq)
    print(cur.fetchall())
 
 conn = sqlite3.connect('orders.db')
 cur = conn.cursor()
-sql()
+create()
+a=int(input("Menu 1) Создать 2) SQL-заппрос"))
+if a==1:
+   create()
+elif a==2:
+   sq = input("sql: ")
+   sql(sq)
+
