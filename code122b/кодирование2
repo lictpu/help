@@ -342,12 +342,12 @@ elif y==('звука'):
         I=H*t*b
         print(I)
 elif y==('изображения'):
-    x=input('что неизвестно?'):
-        if x==('b'):
-            K=int(input('K=?')
-            b=log2(K)
-            print(b)
-        if x==('K'):
-            b=int(input('b=?'))
-            K=2**b
-            print(K)
+    x=input('что неизвестно?')
+    if x==('b'):
+        K=int(input('K=?'))
+        b=log2(K)
+        print(b)
+    if x==('K'):
+        b=int(input('b=?'))
+        K=2**b
+        print(K)
