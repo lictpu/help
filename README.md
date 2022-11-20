@@ -12,5 +12,5 @@
 - hem.ipynb - кодирование по таблице Хэмминга в Jupyter Notebook
 - python шпора.ipynb - функции python c примерами в Jupyter Notebook на DeepNote
 - python_pascal_trans.py - аналоги команд Паскаля в python
-- universal coding.py - универсальный решатель задач на кодирование
+- кодирование0.py - универсальный решатель задач на кодирование
 - Исполнение Томскэнергосбыт.xlsx - задача на подбор парамметров- 
