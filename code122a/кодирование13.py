@@ -1,3 +1,5 @@
+# Осипов Вячеслав
+
 from math import log2, ceil
 from colorama import init
 init(autoreset=True)
