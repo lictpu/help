@@ -21,23 +21,23 @@ N - Мощность алфавита''')
                 case 'I':
                     K = int(input('K = '))
                     i = int(input('i = '))
-                    print(f'I = {K * i}')
+                    print(f'I = {K * i} бит')
 
                 case 'K':
                     I = int(input('I = '))
                     i = int(input('i = '))
-                    print(f'K = {I / i}')
+                    print(f'K = {I / i} символов в сообщении')
                 case 'i':
-                    N = int(input('N = '))
+                    N = input('N = ')
                     if N == '':
                         I = int(input('I = '))
                         K = int(input('K = '))
-                        print(f'i = {I / K}')
+                        print(f'i = {I / K} бит')
                     else:
-                        print(f'i = {math.log2(N)}')
+                        print(f'i = {math.log2(int(N))} бит')
                 case 'N':
                     i = int(input('i = '))
-                    print(f'N = {2**i}')
+                    print(f'N = {2**i} символов в алфавите')
         case '2':
             print('''
 V = I * M * t * k
@@ -54,35 +54,35 @@ k - Количество каналов звучания''')
                     M = int(input('M = '))
                     t = int(input('t = '))
                     k = int(input('k = '))
-                    print(f'V = {I * M * t * k}')
+                    print(f'V = {I * M * t * k} бит')
 
                 case 'I':
                     V = int(input('V = '))
                     M = int(input('M = '))
                     t = int(input('t = '))
                     k = int(input('k = '))
-                    print(f'I = {V / (M * t * k)}')
+                    print(f'I = {V / (M * t * k)} бит')
 
                 case 'M':
                     V = int(input('V = '))
                     I = int(input('I = '))
                     t = int(input('t = '))
                     k = int(input('k = '))
-                    print(f'M = {V / (I * t * k)}')
+                    print(f'M = {V / (I * t * k)} герц')
 
                 case 't':
                     V = int(input('V = '))
                     M = int(input('M = '))
                     I = int(input('I = '))
                     k = int(input('k = '))
-                    print(f't = {V / (I * M * k)}')
+                    print(f't = {V / (I * M * k)} секунд')
 
                 case 'k':
                     V = int(input('V = '))
                     M = int(input('M = '))
                     I = int(input('I = '))
                     t = int(input('t = '))
-                    print(f'k = {V / (I * M * t)}')
+                    print(f'k = {V / (I * M * t)} канала(-а)')
         case '3':
             print('''
 I = i * X * Y
@@ -97,25 +97,25 @@ Y - Высота изображения (в пикселях)''')
                     i = int(input('i = '))
                     X = int(input('X = '))
                     Y = int(input('Y = '))
-                    print(f'I = {i * X * Y}')
+                    print(f'I = {i * X * Y} бит')
 
                 case 'i':
                     I = int(input('I = '))
                     X = int(input('X = '))
                     Y = int(input('Y = '))
-                    print(f'i = {I / (X * Y)}')
+                    print(f'i = {I / (X * Y)} бит')
 
                 case 'X':
                     I = int(input('I = '))
                     i = int(input('i = '))
                     Y = int(input('Y = '))
-                    print(f'i = {I / (i * Y)}')
+                    print(f'i = {I / (i * Y)} пикселей')
 
                 case 'Y':
                     I = int(input('I = '))
                     i = int(input('i = '))
                     X = int(input('X = '))
-                    print(f'i = {I / (i * X)}')
+                    print(f'i = {I / (i * X)} пикселей')
 
 if q == '2':
     A = input('Тип задачи: \n1. Текстовая информация \n2. Звуковая информация \n3. Графическая информация\n')
@@ -136,19 +136,19 @@ N - Мощность алфавита''')
 
             if i == '' and N != '':
                 i = math.log2(int(N))
-                print(f'i = {i}')
+                print(f'i = {i} бит')
             elif i == '' and K != '' and I != '':
                 i = int(I) / int(K)
-                print(f'i = {i}')
+                print(f'i = {i} бит')
 
             if I == '':
-                print(f'I = {int(K) * int(i)}')
+                print(f'I = {int(K) * int(i)} бит')
 
             if K == '':
-                print(f'K = {int(I) / int(i)}')
+                print(f'K = {int(I) / int(i)} символов в сообщении')
 
             if N == '':
-                print(f'N = {2**int(i)}')
+                print(f'N = {2**int(i)} символов в алфавите')
 
         case '2':
             print('''
@@ -165,19 +165,19 @@ k - Количество каналов звучания''')
             k = input('k = ')
 
             if V == '':
-                print(f'V = {int(I) * int(M) * int(t) * int(k)}')
+                print(f'V = {int(I) * int(M) * int(t) * int(k)} бит')
 
             if I == '':
-                print(f'I = {int(V) / (int(M) * int(t) * int(k))}')
+                print(f'I = {int(V) / (int(M) * int(t) * int(k))} бит')
 
             if M == '':
-                print(f'M = {int(V) / (int(I) * int(t) * int(k))}')
+                print(f'M = {int(V) / (int(I) * int(t) * int(k))} герц')
 
             if t == '':
-                print(f't = {int(V) / (int(I) * int(M) * int(k))}')
+                print(f't = {int(V) / (int(I) * int(M) * int(k))} секунд')
 
             if k == '':
-                print(f'M = {int(V) / (int(I) * int(M) * int(t))}')
+                print(f'M = {int(V) / (int(I) * int(M) * int(t))} канал(-а)')
 
         case '3':
             print('''
@@ -192,13 +192,13 @@ Y - Высота изображения (в пикселях)''')
             Y = input('Y = ')
 
             if I == '':
-                print(f'I = {int(i) * int(X) * int(Y)}')
+                print(f'I = {int(i) * int(X) * int(Y)} бит')
 
             if i == '':
-                print(f'i = {int(I) / (int(X) * int(Y))}')
+                print(f'i = {int(I) / (int(X) * int(Y))} бит')
 
             if X == '':
-                print(f'X = {int(I) / (int(i) * int(Y))}')
+                print(f'X = {int(I) / (int(i) * int(Y))} пикселей')
 
             if Y == '':
-                print(f'Y = {int(I) / (int(i) * int(X))}')
+                print(f'Y = {int(I) / (int(i) * int(X))} пикселей')
