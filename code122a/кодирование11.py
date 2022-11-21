@@ -8,19 +8,19 @@ def info():
     if var_to_find.strip() == '1':
         i = int(input('Введи i: '))
         i = transfer_into_bits(i, units_input)
-        print(f'N={int(transfer_from_bits(2 ** i))}')
+        print(f'N={int(transfer_from_bits(2 ** i,units_output))}')
     elif var_to_find == '2':
         what_to_use = input('Что вы хотите использовать? \n1)N \n2)I,K \nИспользую: ')
         if what_to_use == '1':
             N = int(input('Введи N: '))
             N = transfer_into_bits(N, units_input)
-            print(f'i={int(transfer_from_bits(log2(N)))}')
+            print(f'i={int(transfer_from_bits(log2(N), units_output))}')
         elif what_to_use == '2':
             K = int(input('Введите K: '))
             K = transfer_into_bits(K, units_input)
             I = int(input('Введите I: '))
             I = transfer_into_bits(I, units_input)
-            print(f'i={int(transfer_from_bits(I / K))}')
+            print(f'i={int(transfer_from_bits(I / K, units_output))}')
     elif var_to_find == '3':
         what_to_use = input('Что вы хотите использовать? \n1)N,K \n2)i,K \nИспользую: ')
         if what_to_use == "1":
@@ -29,13 +29,13 @@ def info():
             N = int(input('Введите N: '))
             N = transfer_into_bits(N, units_input)
             i = log2(N)
-            print(f'I={int(transfer_from_bits(K * i))}')
+            print(f'I={int(transfer_from_bits(K * i, units_output))}')
         else:
             K = int(input('Введите K: '))
             K = transfer_into_bits(K, units_input)
             i = int(input('Введите i: '))
             i = transfer_into_bits(i, units_input)
-            print(f'I={int(transfer_from_bits(K * i))}')
+            print(f'I={int(transfer_from_bits(K * i, units_output))}')
     elif var_to_find == '4':
         what_to_use = input('Что вы хотите использовать? \n1)N,I \n2)i,I \nИспользую: ')
         if what_to_use == '1':
@@ -44,13 +44,13 @@ def info():
             I = int(input('Введите I: '))
             I = transfer_into_bits(I, units_input)
             i = log2(K)
-            print(f'I={int(transfer_from_bits(I / i))}')
+            print(f'I={int(transfer_from_bits(I / i, units_output))}')
         else:
             i = int(input('Введите i: '))
             i = transfer_into_bits(i, units_input)
             I = int(input('Введите I: '))
             I = transfer_into_bits(I, units_input)
-            print(f'K={int(transfer_from_bits(I / i))}')
+            print(f'K={int(transfer_from_bits(I / i, units_output))}')
 
 
 def image():
@@ -75,10 +75,10 @@ def sound():
     if var_to_find == '1':
         t = int(input('Введи ꚍ: '))
         t = transfer_into_bits(t, units_input)
-        print(f'H = {int(transfer_from_bits(1 / t))}')
+        print(f'H = {int(transfer_from_bits(1 / t, units_output))}')
     elif var_to_find == '2':
         H = int(input('Введи H: '))
-        print(f't = {int(transfer_from_bits(1 / H))}')
+        print(f't = {int(transfer_from_bits(1 / H, units_output))}')
     elif var_to_find == "3":
         H = int(input('Введи H: '))
         H = transfer_into_bits(H, units_input)
@@ -86,7 +86,7 @@ def sound():
         t = transfer_into_bits(t, units_input)
         b = int(input('Введи b'))
         b = transfer_into_bits(b, units_input)
-        print(f'I = {int(transfer_from_bits(H * t * b))}')
+        print(f'I = {int(transfer_from_bits(H * t * b, units_output))}')
     elif var_to_find == "4":
         I = int(input('Введи I: '))
         I = transfer_into_bits(I, units_input)
@@ -94,11 +94,11 @@ def sound():
         H = transfer_into_bits(H, units_input)
         b = int(input('Введи b:'))
         b = transfer_into_bits(b, units_input)
-        print(f't = {int(transfer_from_bits(I / (H * b)))}')
+        print(f't = {int(transfer_from_bits(I / (H * b), units_output))}')
     elif var_to_find == "5":
         b = int(input('Введи b:'))
         b = transfer_into_bits(b, units_input)
-        print(f'K = {int(transfer_from_bits(2 ** b))}')
+        print(f'K = {int(transfer_from_bits(2 ** b, units_output))}')
 
 
 def transfer_into_bits(var, units):
