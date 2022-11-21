@@ -1,7 +1,20 @@
 def f0():
     
     import math
-
+    
+    # вывод результата
+    def output(form, otvet, ed_izm):
+        print(f'\nОтвет: {form}={otvet} {ed_izm}\nЗадача решена')
+        if ed_izm=='бит': print(f'Чтобы получить байты, делим биты на 8={otvet/8} байт.\nЧтобы получить КБайты, разделим байты на 1024={otvet/8/1024} КБайт.')
+        
+        print(f'Хотите решить еще одну? Для этого нажмите 1')
+        
+        if input('Ваш выбор-')=='1':
+            f0()
+        else:
+            print('Выход')
+            exit()
+    # Меню расчета 1
     def menu11_resh(I,K,i,N,sel):
 
         otvet=0
@@ -47,14 +60,9 @@ def f0():
             otvet=N
             ed_izm='символов'
 
-
-        print(f'\nОтвет: {form}={otvet} {ed_izm}\nЗадача решена. Хотите решить еще одну? Для этого нажмите 1')
-        if input('Ваш выбор-')=='1':
-            f0()
-        else:
-            print('выход')
-            exit()
+        output(form, otvet, ed_izmed_izm)
         
+    # Меню расчета 2    
     def menu21_resh(V,p,i,N,sel):
         #print(V,p,i,sel)
         otvet=0
@@ -87,9 +95,10 @@ def f0():
                 form='i=log2(N)'
             otvet=i
             ed_izm='бит'
-            
-        print(f'\nОтвет: {form}={otvet} {ed_izm}\nЗадача решена. Хотите решить еще одну? Для этого нажмите 1')
-
+        
+        output(form, otvet, ed_izmed_izm)    
+        
+    # Меню расчета 3
     def menu31_resh(I,H,b,t,sel):
         otvet=0
         if sel==1:
@@ -118,10 +127,10 @@ def f0():
                 t=I/H*b
                 form='t=I/H*b'
             otvet=t
-            ed_izm='с'
+            ed_izm='сек'
         
-        print(f'\nОтвет: {form}={otvet} {ed_izm}\nЗадача решена. Хотите решить еще одну? Для этого нажмите 1')
-
+        output(form, otvet, ed_izmed_izm)
+    #  Меню выбора величин
     def menu11(m1,m2,m3,m4,select,sel):
         sel2=0
         m5='Закончить ввод данных'
@@ -169,7 +178,7 @@ def f0():
             elif sel2==select:
                 print('Этот пункт уже активирован!')
                 input('Нажмите любую клавишу')
-                     
+    # Главное меню                
     def menu1():
         print(text)
         if sel==1:
@@ -200,7 +209,7 @@ def f0():
         print(f'Вы выбрали {select}')
         menu11(m1,m2,m3,m4,select,sel)
 
-    # Заготовки и настрокйки
+    # Заготовки и настройки
     text='\nВыберите, что вам нужно найти'
     vibor='Ваш выбор-'
     otv='\nОтвет: {form}={otvet} {ed_izm}\nЗадача решена. Хотите решить еще одну? Для этого нажмите 1'
