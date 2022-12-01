@@ -14,3 +14,10 @@
 - python_pascal_trans.py - аналоги команд Паскаля в python
 - кодирование0.py - универсальный решатель задач на кодирование
 - Исполнение Томскэнергосбыт.xlsx - задача на подбор парамметров- 
+
+
+flowchart LR
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
