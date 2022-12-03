@@ -31,12 +31,13 @@ E -->|Плохо|I[Приключения]
 ```
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title Рабочий день
+    section В лицей
+      Завтрак: 5: Me
+      Дорога: 4: Me
+      Пары: 4: Me
+    section Из лицея
+      Дорога: 3: Me
+      Подготовка: 3: Me
+      Кодинг: 5: Me
 ```
