@@ -1,7 +1,8 @@
 ## Учебно-справочный репозиторий лицеистов ТПУ
 [![N|Solid](https://portal.tpu.ru/f_lyceum/img/main-logo.jpg)](https://portal.tpu.ru/lyceum)
 
- 
+- [X] mermaid
+- [ ] plantuml
 
 ## Состав
 
@@ -29,6 +30,7 @@ D -->|Хорошо|G[ВУЗ]
 E -->|Хорошо|G[ВУЗ]
 E -->|Плохо|I[Приключения]
 ```
+
 ```mermaid
 journey
     title Рабочий день
@@ -56,27 +58,9 @@ gantt
     НГ      : 1d
 ```
 
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and eatures
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
 
-```
+
+```ch
 @startuml
 start
 partition "[[http://plantuml.com partition_name]]" {
