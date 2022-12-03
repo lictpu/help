@@ -75,3 +75,14 @@ mindmap
       Pen and paper
       Mermaid
 ```
+
+```
+@startuml
+start
+partition "[[http://plantuml.com partition_name]]" {
+    :read doc. on [[http://plantuml.com plantuml_website]];
+    :test diagram;
+}
+end
+@enduml
+```
