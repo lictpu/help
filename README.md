@@ -46,7 +46,7 @@ journey
 
 ```mermaid
 gantt
-    title План на Декабрь(диаграма Гранта)
+    title План на Декабрь(диаграмма Ганта)
     dateFormat  YYYY-MM-DD
     section Учебные
     Проект 1     :a1, 2022-12-05, 7d
@@ -57,8 +57,23 @@ gantt
     В лицее неуч.      :2022-12-27  , 3d
     НГ      : 1d
 ```
+```mermaid
+flowchart LR
+    A-->B
+    B-->C
+    C-->D
+    D-->E
+    click A "https://www.github.com" _blank
+    click B "https://www.github.com" "Open this in a new tab" _blank
+    click C href "https://www.github.com" _blank
+    click D href "https://www.github.com" "Open this in a new tab" _blank
+```
 
 
+```mermaid
+flowchart TB
+    A["Лицей (группы)"]
+```
 
 ```ch
 @startuml
