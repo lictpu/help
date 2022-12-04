@@ -15,28 +15,22 @@ note left of State2 : This is the note to the left.
 
 ```mermaid
 stateDiagram-v2
-AA
-note right of AA
-    Important information! You can write notes.
-A["Лицей (группы)"]
+A: "Лицей (группы)"
 A -->10
-10 --> Далее
-Далее ----> 11
-10 --> 122а & 122б  & 132б & 142а & 142б & 152а & 152б
-
-11 --> 021а & 021б & 031а & 031б & 041б & 051б
-122а -->5
-122б -->5 
-132б -->5
-142а -->5
-142б -->5
-152а -->5
-152б -->5
-021а -->55
-021б -->55
-031б -->55
-041б -->55
-051б -->55
+10 --> 122a & 122b & 132b & 142a & 142b & 152a & 152b
+D: "Далее"
+10 --> D
+D --> 11
+11 --> 021a & 021b & 031a & 031b & 041b & 051b
+122a -->5
+note right of 122a
+    Important information! You can write notes.
+    end note
+122b -->5 
+note right of 122b
+    Important information! You can write notes.
+    end note
+132b -->5
     
     %%фамилии и распределение на оценки
 ```
