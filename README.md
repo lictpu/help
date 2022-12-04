@@ -9,7 +9,7 @@
 ## Состав
 
 - latex -папка с latex сборками групп
-- ![](https://user-images.githubusercontent.com/114549805/205498470-cedca720-1950-48ab-91b4-5dd23a5ff0a0.png)](https://github.com/lyctpu/help/blob/main/bdtest.py)
+- [![](https://user-images.githubusercontent.com/114549805/205498470-cedca720-1950-48ab-91b4-5dd23a5ff0a0.png)](https://github.com/lyctpu/help/blob/main/bdtest.py)
  код создания и работы с БД sqlite
 - dbsql_client_v01.exe - скомпилированный python файл клиента работы с mysql бд
 - hem.ipynb - кодирование по таблице Хэмминга в Jupyter Notebook
