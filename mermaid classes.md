@@ -1,3 +1,16 @@
+```mermaid
+flowchart TD
+a["=input('текст')"]
+b["=print(f' текст {var} ')"]
+c["txt='dfg'"]
+d["num=2"]
+e["=int('2')"]
+f["=str(2)"]
+g["def f(var) : "]
+```
+
+
+
 ```
 stateDiagram-v2
 
