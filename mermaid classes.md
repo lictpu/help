@@ -1,5 +1,6 @@
 ```mermaid
 flowchart TD
+
 a["=input('текст')"]
 b["=print(f' текст {var} ')"]
 c["txt='dfg'"]
@@ -7,6 +8,14 @@ d["num=2"]
 e["=int('2')"]
 f["=str(2)"]
 g["def f(var) : "]
+aa["=[1,'2']"]
+bb["={1,'2','3',9,'af'}"]
+cc["=(1,'2','af')"]
+dd["={'dict': 1, 'dictionary': 2}"]
+aa & bb & cc & dd --- t1[Структуры д-ых]
+t2[Ввод/Вывод]---a & b
+t3[Переменные]---c & d
+
 ```
 
 
