@@ -1,21 +1,44 @@
 ```mermaid
-flowchart TD
+stateDiagram-v2
+def: def
+t1: Ввод/Вывод
+t2: Структуры данных
+t3: Преобразование/типы
+t4: Переменные
+def-->t1
+t1-->t2
+t2-->t3
+t3-->t4
 
-a["=input('текст')"]
-b["=print(f' текст {var} ')"]
-c["txt='dfg'"]
-d["num=2"]
-e["=int('2')"]
-f["=str(2)"]
-g["def f(var) : "]
-aa["=[1,'2']"]
-bb["={1,'2','3',9,'af'}"]
-cc["=(1,'2','af')"]
-dd["={'dict': 1, 'dictionary': 2}"]
-aa & bb & cc & dd --- t1[Структуры д-ых]
-t2[Ввод/Вывод]---a & b
-t3[Переменные]---c & d
+note right of t1
+    =[1,'2']
+    ={1,'2','3',9,'af'}
+    =(1,'2','af')
+    ={'dict': 1, 'dictionary': 2}
+end note    
 
+note right of def
+    def f(var):
+    ...
+    `  return res
+    ...
+    f(var)
+end note
+
+note right of t2
+   =input('текст')
+   =print(f' текст {var} ')
+end note
+
+note right of t3
+    =int('2')
+    =str(3)
+end note 
+
+note right of t4
+    num=2
+    txt='3'
+end note    
 ```
 
 
