@@ -8,6 +8,37 @@
 
 ## Состав
 
+```python
+import telebot
+import openai
+while True:
+    try:
+
+        bot=telebot.TeleBot('5992274775:AAFUjj--15Ep2ulKg0HIUyeYrsSBH4a2l-6c')
+        openai.api_key="sk--5OLfN5b9hvMMvVli3l4pT3BlbkFJLlGmXyb6qIq7VS0CzoaY"
+
+        @bot.message_handler(content_types=["text"])
+        def handle_text(message):
+            response=openai.Completion.create(
+                engine='text-davinci-003',
+                prompt=f'{message.text}',
+                max_tokens=1124,
+                n=1,
+                stop=None,
+                temperature=1,
+            )
+            bot.send_message(message.chat.id, response.choices[0].text)
+
+        bot.polling()
+
+
+
+    except Exception:
+        print('error')
+        continue
+
+```
+
 [![](https://user-images.githubusercontent.com/114549805/205498470-cedca720-1950-48ab-91b4-5dd23a5ff0a0.png)](https://github.com/lyctpu/help/blob/main/bdtest.py)
  
 - latex -папка с latex сборками групп
